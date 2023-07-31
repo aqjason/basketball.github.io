@@ -1,71 +1,127 @@
+/* 將 header 設置為 flex 容器，並使用 space-between 和 center 對齊方式 */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #073763;
-    color: #fff;
-    padding: 10px 20px;
-  }
+  display: flex; /* 使用 flex 佈局 */
+  justify-content: space-between; /* 水平方向空間平均分配 */
+  align-items: center; /* 垂直方向居中對齊 */
+  background-color: #073763; /* 設置背景顏色為 #073763 */
+  color: #fff; /* 設置文字顏色為白色 */
+  padding: 10px 20px; /* 設置上下 10px 和左右 20px 的 padding */
+}
+
+/* 移除 header 內 h1 元素的 margin */
+header h1 {
+  margin: 0; /* 將 margin 設置為 0，去除預設間距 */
+}
+
+/* 將 header 內的導覽清單設置為 flex 容器 */
+header nav ul {
+  list-style: none; /* 移除預設清單樣式 */
+  margin: 0; /* 設置 margin 為 0，去除預設間距 */
+  padding: 0; /* 設置 padding 為 0，去除預設間距 */
+  display: flex; /* 使用 flex 佈局 */
+}
+
+/* 為導覽清單中的每個項目添加左邊距 */
+header nav ul li {
+  margin-left: 20px; /* 設置左邊距為 20px */
+}
+
+/* 將連結文字顏色設置為白色並去掉底線 */
+header nav ul li a {
+  color: #fff; /* 設置文字顏色為白色 */
+  text-decoration: none; /* 去除文字底線 */
+  font-size: 16px; /* 設置文字大小為 16px */
+}
+
+/* 將主內容區域設置為 flex 容器，並使用 wrap 和 center 對齊方式 */
+main {
+  display: flex; /* 使用 flex 佈局 */
+  flex-wrap: wrap; /* 使用 wrap 對超出寬度的內容進行換行 */
+  justify-content: center; /* 水平方向居中對齊 */
+  margin: 20px; /* 設置 margin 為 20px */
+  align-items: center; /* 垂直方向居中對齊 */
+}
+
+/* 球員卡片的樣式 */
+.player-card {
+  width: 300px; /* 設置寬度為 300px */
+  margin: 20px; /* 設置 margin 為 20px */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
+  transition: all 0.3s ease-in-out; /* 添加過渡效果 */
+}
+
+/* 當懸停在球員卡片上時添加陰影效果 */
+.player-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 懸停時的陰影效果 */
+}
+
+/* 設置球員卡片內的圖片縮放以填充容器 */
+.player-card img {
+  width: 100%; /* 設置寬度為 100% */
+  height: 300px; /* 設置高度為 300px */
+  object-fit: cover; /* 使用 cover 填充並保持比例 */
+}
+
+/* 球員卡片標題的樣式 */
+.player-card h2 {
+  margin: 0; /* 設置 margin 為 0，去除預設間距 */
+  font-size: 24px; /* 設置文字大小為 24px */
+  padding: 10px; /* 設置 padding 為 10px */
+  background-color: #073763; /* 設置背景顏色為 #073763 */
+  color: #fff; /* 設置文字顏色為白色 */
+  text-align: center; /* 文字居中對齊 */
+}
+
+/* 球員卡片內段落的樣式 */
+.player-card p {
+  padding: 10px; /* 設置 padding 為 10px */
+  font-size: 16px; /* 設置文字大小為 16px */
+  text-align: justify; /* 文字內容兩端對齊 */
+  line-height: 1.5; /* 設置行高為 1.5倍字體大小 */
+  text-indent: 25px; /* 調整文字縮進量 */
+}
+
+/* 表格的樣式 */
+table {
+  border-collapse: collapse; /* 折疊邊框模型 */
+  width: 90%; /* 設置表格寬度為 90% */
+  max-width: 600px; /* 設置最大寬度為 600px */
+  background-color: #fff; /* 設置背景顏色為白色 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
+  transform: scale(1.1); /* 放大表格 1.1 倍 */
+  margin-top: 0px; /* 將表格向下移動 0px */
   
-  header h1 {
-    margin: 0;
-  }
-  
-  header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  header nav ul li {
-    margin-left: 20px;
-  }
-  
-  header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-  }
-  
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px;
-  }
-  
-  .player-card {
-    width: 300px;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .player-card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .player-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
-  
-  .player-card h2 {
-    margin: 0;
-    font-size: 24px;
-    padding: 10px;
-    background-color: #073763;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .player-card p {
-    padding: 10px;
-    font-size: 16px;
-    text-align: justify;
-    line-height: 1.5;
-    text-indent: 25px;  /* 調整這裡的數值來控制文字的縮進量 */
-  }
-  
+}
+
+/* 表格頭部和表格內容的單元格樣式 */
+th, td {
+  padding: 12px; /* 設置內容與邊框的間距為 12px */
+  text-align: center; /* 將文字居中對齊 */
+  border-bottom: 1px solid #ddd; /* 設置底部邊框為 1px 寬度的淺灰色實線 */
+}
+
+/* 表格頭部的樣式 */
+th {
+  background-color: #073763; /* 設置背景顏色為 #073763 */
+  color: #fff; /* 設置文字顏色為白色 */
+}
+
+/* 表格的交替行背景顏色 */
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* 設置背景顏色為 #f2f2f2 */
+}
+
+/* 表格行懸停效果 */
+tr:hover {
+  background-color: #ddd; /* 懸停在行上時設置背景顏色為 #ddd */
+}
+
+/* 球員資訊區塊的樣式 */
+.player-info {
+  width: 300px; /* 設置寬度為 300px */
+  margin-bottom: 20px; /* 設置下邊距為 20px */
+  padding: 10px; /* 設置 padding 為 10px */
+  background-color: #f2f2f2; /* 設置背景顏色為 #f2f2f2 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
+  text-align: center; /* 文字居中對齊 */
+}
